@@ -1,5 +1,5 @@
 
-package b_cronometro;
+package x_cronometro;
 
 /**
  *

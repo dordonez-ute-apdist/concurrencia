@@ -1,5 +1,5 @@
 
-package b_cronometro;
+package x_cronometro;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -8,29 +8,30 @@ import java.util.logging.Logger;
  *
  * @author dordonez@ute.edu.ec
  */
-public class Main {
+public class Main1 {
 
     public static void main(String[] args) {       
         //Crea nueva thread y la ejecuta
-        Cronometro crono = new Cronometro();
+        Thread crono = new Cronometro1();
         crono.start();     
         
         try {
-            //le deja ejecutarse tres segundos
+            //la deja ejecutarse tres segundos
             Thread.sleep(300);
         } catch (InterruptedException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Main1.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        //lo detiene
-        crono.detenerse();
+        //la detiene
+        crono.interrupt();
         try {
-            crono.join();
+            crono.join();//espera que haya terminado
         } catch (InterruptedException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Main1.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
         //obtiene resultado
-        int resultado = crono.getResultado();
+        long resultado = ( (Cronometro1) crono ).getResultado();
         System.out.println("Resultado: " + resultado);
     }
 }

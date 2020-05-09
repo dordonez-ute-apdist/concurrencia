@@ -1,8 +1,11 @@
 
-package b_cronometro;
+package x_cronometro;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import x_cronometro.Cronometro2;
+import x_cronometro.Main2;
 
 /**
  *

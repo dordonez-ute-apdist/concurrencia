@@ -32,11 +32,11 @@ public class Main {
         new Thread(new NuevaRunnable()).start();
         new NuevaThread().start();
         
-        //se detiene medio segundo en cada iteraciÃ³n       
+        //se detiene medio segundo en cada iteración       
         for(int i = 0; i < 5; i++) {
             System.out.println(name + " paso: " + i);
             try {
-                Thread.currentThread().sleep(500);
+                Thread.sleep(500);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }

@@ -36,7 +36,7 @@ public class Main {
         for(int i = 0; i < 5; i++) {
             System.out.println(name + " paso: " + i);
             try {
-                Thread.sleep(500);
+                Thread.currentThread().sleep(500);
             } catch (InterruptedException ex) {
                 ex.printStackTrace();
             }

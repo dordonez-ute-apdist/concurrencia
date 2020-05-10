@@ -1,14 +1,15 @@
 package b_candado;
 
 /**
- *
+ * https://github.com/dordonez-ute-apdist/concurrencia
+ * 
  * @author dordonez@ute.edu.ec
  */
 public class Main {
     
     public static void main(String[] args) {
-    	Impresora imp = new ImpresoraNOK();
-    	//Impresora imp = new ImpresoraTS();
+    	//Impresora imp = new ImpresoraNOK();
+    	Impresora imp = new ImpresoraTS();
     	
         Hilo h1 = new Hilo(imp, "abcdefgh");
         Hilo h2 = new Hilo(imp, "ABCDEFGH");

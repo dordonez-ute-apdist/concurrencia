@@ -5,7 +5,11 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
 /**
- *
+ * https://github.com/dordonez-ute-apdist/concurrencia
+ * 
+ * Productores y consumidores comparten información mediante una
+ * cola de mensajes, BlockingQueue
+ * 
  * @author dordonez@ute.edu.ec
  */
 public class Main {

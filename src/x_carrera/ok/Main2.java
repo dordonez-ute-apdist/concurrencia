@@ -2,7 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package c_carrera.ok;
+package x_carrera.ok;
+
+import c_carrera.ok.Corredor2;
 
 /**
  *

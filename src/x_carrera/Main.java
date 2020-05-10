@@ -1,5 +1,7 @@
 
-package c_carrera.ok;
+package x_carrera;
+
+import c_carrera.Corredor;
 
 /**
  *
@@ -7,15 +9,16 @@ package c_carrera.ok;
  */
 public class Main { 
 
-    public static void main(String args[]) throws InterruptedException {
-        Corredor[] c = new Corredor[10];
+    public static void main(String args[]) {
+        Corredor c[] = new Corredor[10];
         
         // Partida: todos los corredores arrancan
         for (int i = 0; i < 10; i++) {
             c[i] = new Corredor();
-            c[i].start();
+
         }
         
+        // Espera de 100 ms
         try {
             Thread.sleep(100);
         } catch (InterruptedException ex) {
@@ -25,12 +28,14 @@ public class Main {
         
         // Fin: detenga a todos los corredores
         for (int i = 0; i < 10; i++) {
-            c[i].detenerse();
+            
         }         
         
         //Presente los resultados de cada corredor
-        for (int i = 0; i < 10; i++) {           
-            c[i].join();
+        for (int i = 0; i < 10; i++) {
+            
+            
+            
             System.out.println(i + " : " + c[i].getResult());
         }        
         

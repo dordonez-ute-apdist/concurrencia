@@ -9,19 +9,7 @@ package c_candado_rw;
 public class Main {
 
     private static Cuenta c = new Cuenta();
-    
-    public static void main(String[] args) {
-        for(int i = 0; i < 5; i++) {
-            new Escribe().start();
-        }  
-        for(int i = 0; i < 1000; i++) {
-            new Lee().start();
-        }
-        for(int i = 0; i < 5; i++) {
-            new Escribe().start();
-        }  
-    }
-    
+       
     private static class Escribe extends Thread {
         @Override
         public void run() {
@@ -35,6 +23,18 @@ public class Main {
         public void run() {
             System.out.println("Saldo: " + c.getSaldo());
         }    	
+    }    
+    
+    public static void main(String[] args) {
+        for(int i = 0; i < 5; i++) {
+            new Escribe().start();
+        }  
+        for(int i = 0; i < 1000; i++) {
+            new Lee().start();
+        }
+        for(int i = 0; i < 5; i++) {
+            new Escribe().start();
+        }  
     }    
     
 }

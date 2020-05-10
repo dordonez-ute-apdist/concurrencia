@@ -2,7 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package e_compartido;
+package x_compartido;
+
+import e_compartido.Hilo;
 
 /**
  *

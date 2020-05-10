@@ -1,5 +1,5 @@
 
-package d_candados.transferencias;
+package x_candados.transferencias;
 
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
